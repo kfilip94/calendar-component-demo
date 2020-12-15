@@ -113,7 +113,7 @@ export default {
     },
 
     getLastAvailableEndDate(startDate, availableDates) {
-      const availableEndDates = this.availableDates.find(
+      const availableEndDates = availableDates.find(
         ({ from, to }) => from <= startDate && startDate <= to
       );
       return availableEndDates ? availableEndDates.to : null;

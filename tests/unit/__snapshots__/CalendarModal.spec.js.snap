@@ -19,7 +19,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         class="navButton"
         data-id="prevMonthBtn"
       >
-        &lt;
+         &lt; 
       </button>
       <span
         class="monthLabel"
@@ -30,7 +30,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         class="navButton"
         data-id="nextMonthBtn"
       >
-        &gt;
+         &gt; 
       </button>
     </div>
     <div
@@ -75,7 +75,7 @@ exports[`CalendarModal.vue select next month 1`] = `
       
       
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -84,7 +84,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -93,7 +93,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -102,7 +102,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -111,7 +111,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -120,7 +120,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -129,7 +129,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -138,7 +138,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -147,7 +147,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -156,7 +156,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -165,7 +165,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -174,7 +174,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -183,7 +183,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -192,7 +192,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -201,7 +201,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -210,7 +210,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -219,7 +219,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -228,7 +228,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -237,7 +237,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -246,7 +246,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -255,7 +255,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -264,7 +264,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -273,7 +273,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -282,7 +282,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -291,7 +291,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -300,7 +300,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -309,7 +309,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -318,7 +318,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -327,7 +327,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -336,7 +336,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -345,7 +345,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -354,7 +354,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -363,7 +363,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -372,7 +372,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -381,7 +381,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -390,7 +390,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -399,7 +399,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -408,7 +408,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -417,7 +417,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -426,7 +426,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -435,7 +435,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -444,7 +444,7 @@ exports[`CalendarModal.vue select next month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -477,7 +477,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         class="navButton"
         data-id="prevMonthBtn"
       >
-        &lt;
+         &lt; 
       </button>
       <span
         class="monthLabel"
@@ -488,7 +488,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         class="navButton"
         data-id="nextMonthBtn"
       >
-        &gt;
+         &gt; 
       </button>
     </div>
     <div
@@ -533,7 +533,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
       
       
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -542,7 +542,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -551,7 +551,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -560,7 +560,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -569,7 +569,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -578,7 +578,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -587,7 +587,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -596,7 +596,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -605,7 +605,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -614,7 +614,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -623,7 +623,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -632,7 +632,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -641,7 +641,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -650,7 +650,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -659,7 +659,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -668,7 +668,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -677,7 +677,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="today day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -686,7 +686,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="day"
+        class="today day"
       >
         <span
           class="dayNumber"
@@ -695,7 +695,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -704,7 +704,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -803,7 +803,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"
@@ -812,7 +812,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
         </span>
       </button>
       <button
-        class="unavailableDay day"
+        class="unavailable day"
       >
         <span
           class="dayNumber"

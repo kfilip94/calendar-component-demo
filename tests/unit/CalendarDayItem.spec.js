@@ -17,14 +17,13 @@ describe('CalendarDayItem.vue', () => {
       day,
       editMode: EDIT_MODES.CHECK_IN,
       startDate: Date.parse(new Date('2020-12-18')),
-      lastAvailableDate: null
+      lastAvailableEndDate: null
     }
   })
 
   it('unavailable to check when "booked" or lesser than today date', async () => {
     await wrapper.setProps({ day: {...day, available: false }});
     await wrapper.find('button').trigger('click');
-    console.log('wrapper.emitted(): ',wrapper.emitted())
     expect(!!wrapper.emitted().onDayClick).toBe(false)
   })
 
@@ -41,7 +40,7 @@ describe('CalendarDayItem.vue', () => {
   it('unavailable as "check out" date when "last available date" is lesser than current date', async () => {
     await wrapper.setProps({
       day, startDate: Date.parse(new Date('2020-12-18')),
-      lastAvailableDate: Date.parse(new Date('2020-12-19')),
+      lastAvailableEndDate: Date.parse(new Date('2020-12-19')),
       editMode: EDIT_MODES.CHECK_OUT
     });
     await wrapper.find('button').trigger('click');

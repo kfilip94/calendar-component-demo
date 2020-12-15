@@ -67,7 +67,7 @@ export default {
   },
   methods: {
     selectDay() {
-      if (!this.isUnavailableDay) {
+      if (!this.isUnavailable) {
         this.$emit("onDayClick", this.day);
       }
     },
