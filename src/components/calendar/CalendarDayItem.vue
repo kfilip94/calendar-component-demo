@@ -8,7 +8,7 @@
       today: isToday,
       unavailableDay: isUnavailableDay,
     }"
-    @click="$emit('on-day-click', day)"
+    @click="selectDay"
     class="day"
   >
     <span class="dayNumber">{{ day.number }}</span>
@@ -16,6 +16,12 @@
 </template>
 
 <script>
+import {
+  EDIT_MODES,
+  editModeValidator
+} from "./CalendarUtils";
+const { CHECK_OUT } = EDIT_MODES;
+
 export default {
   name: "CalendarDayItem",
   props: {
@@ -24,9 +30,7 @@ export default {
     day: Object,
     editMode: {
       type: String,
-      validator: (value) => {
-        return ["checkIn", "checkOut"].includes(value);
-      },
+      validator: editModeValidator,
     },
     lastAvailableDate: Number,
     todayDate: Number,
@@ -57,13 +61,20 @@ export default {
       const { day, startDate, lastAvailableDate, editMode } = this;
       return (
         !day.available ||
-        (startDate && editMode === "checkOut" && day.miliseconds < startDate) ||
+        (startDate && editMode === CHECK_OUT && day.miliseconds < startDate) ||
         (lastAvailableDate &&
-          editMode === "checkOut" &&
+          editMode === CHECK_OUT &&
           lastAvailableDate < day.miliseconds)
       );
     },
   },
+  methods: {
+    selectDay() {
+      if(!this.isUnavailableDay) {
+        this.$emit('onDayClick', this.day)
+      }
+    }
+  }
 };
 </script>
 

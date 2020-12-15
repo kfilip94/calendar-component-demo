@@ -1,0 +1,854 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CalendarModal.vue select next month 1`] = `
+<div
+  class="modalContainer"
+  selecteddate="Tue Dec 01 2020 00:00:00 GMT+0100 (Central European Standard Time)"
+>
+  <div
+    class="modaArrow"
+    style="right: 32px;"
+  />
+  <div
+    class="modal"
+  >
+    <div
+      class="header"
+    >
+      <button
+        class="navButton"
+        data-id="prevMonthBtn"
+      >
+        &lt;
+      </button>
+      <span
+        class="monthLabel"
+      >
+        November 2020
+      </span>
+      <button
+        class="navButton"
+        data-id="nextMonthBtn"
+      >
+        &gt;
+      </button>
+    </div>
+    <div
+      class="monthGrid"
+    >
+      
+      <div
+        class="dayName"
+      >
+        Sun
+      </div>
+      <div
+        class="dayName"
+      >
+        Mon
+      </div>
+      <div
+        class="dayName"
+      >
+        Tue
+      </div>
+      <div
+        class="dayName"
+      >
+        Wed
+      </div>
+      <div
+        class="dayName"
+      >
+        Thu
+      </div>
+      <div
+        class="dayName"
+      >
+        Fri
+      </div>
+      <div
+        class="dayName"
+      >
+        Sat
+      </div>
+      
+      
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          25
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          26
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          27
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          28
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          29
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          30
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          31
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          1
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          2
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          3
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          4
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          5
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          6
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          7
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          8
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          9
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          10
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          11
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          12
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          13
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          14
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          15
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          16
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          17
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          18
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          19
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          20
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          21
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          22
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          23
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          24
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          25
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          26
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          27
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          28
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          29
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          30
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          1
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          2
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          3
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          4
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          5
+        </span>
+      </button>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CalendarModal.vue select previous month 1`] = `
+<div
+  class="modalContainer"
+  selecteddate="Mon Feb 01 2021 00:00:00 GMT+0100 (Central European Standard Time)"
+>
+  <div
+    class="modaArrow"
+    style="right: 32px;"
+  />
+  <div
+    class="modal"
+  >
+    <div
+      class="header"
+    >
+      <button
+        class="navButton"
+        data-id="prevMonthBtn"
+      >
+        &lt;
+      </button>
+      <span
+        class="monthLabel"
+      >
+        December 2020
+      </span>
+      <button
+        class="navButton"
+        data-id="nextMonthBtn"
+      >
+        &gt;
+      </button>
+    </div>
+    <div
+      class="monthGrid"
+    >
+      
+      <div
+        class="dayName"
+      >
+        Sun
+      </div>
+      <div
+        class="dayName"
+      >
+        Mon
+      </div>
+      <div
+        class="dayName"
+      >
+        Tue
+      </div>
+      <div
+        class="dayName"
+      >
+        Wed
+      </div>
+      <div
+        class="dayName"
+      >
+        Thu
+      </div>
+      <div
+        class="dayName"
+      >
+        Fri
+      </div>
+      <div
+        class="dayName"
+      >
+        Sat
+      </div>
+      
+      
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          29
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          30
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          1
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          2
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          3
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          4
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          5
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          6
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          7
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          8
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          9
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          10
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          11
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          12
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          13
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          14
+        </span>
+      </button>
+      <button
+        class="today day"
+      >
+        <span
+          class="dayNumber"
+        >
+          15
+        </span>
+      </button>
+      <button
+        class="day"
+      >
+        <span
+          class="dayNumber"
+        >
+          16
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          17
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          18
+        </span>
+      </button>
+      <button
+        class="day"
+      >
+        <span
+          class="dayNumber"
+        >
+          19
+        </span>
+      </button>
+      <button
+        class="day"
+      >
+        <span
+          class="dayNumber"
+        >
+          20
+        </span>
+      </button>
+      <button
+        class="day"
+      >
+        <span
+          class="dayNumber"
+        >
+          21
+        </span>
+      </button>
+      <button
+        class="day"
+      >
+        <span
+          class="dayNumber"
+        >
+          22
+        </span>
+      </button>
+      <button
+        class="day"
+      >
+        <span
+          class="dayNumber"
+        >
+          23
+        </span>
+      </button>
+      <button
+        class="day"
+      >
+        <span
+          class="dayNumber"
+        >
+          24
+        </span>
+      </button>
+      <button
+        class="day"
+      >
+        <span
+          class="dayNumber"
+        >
+          25
+        </span>
+      </button>
+      <button
+        class="day"
+      >
+        <span
+          class="dayNumber"
+        >
+          26
+        </span>
+      </button>
+      <button
+        class="day"
+      >
+        <span
+          class="dayNumber"
+        >
+          27
+        </span>
+      </button>
+      <button
+        class="day"
+      >
+        <span
+          class="dayNumber"
+        >
+          28
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          29
+        </span>
+      </button>
+      <button
+        class="unavailableDay day"
+      >
+        <span
+          class="dayNumber"
+        >
+          30
+        </span>
+      </button>
+      <button
+        class="day"
+      >
+        <span
+          class="dayNumber"
+        >
+          31
+        </span>
+      </button>
+      <button
+        class="day"
+      >
+        <span
+          class="dayNumber"
+        >
+          1
+        </span>
+      </button>
+      <button
+        class="day"
+      >
+        <span
+          class="dayNumber"
+        >
+          2
+        </span>
+      </button>
+      
+    </div>
+  </div>
+</div>
+`;

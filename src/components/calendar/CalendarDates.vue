@@ -3,20 +3,22 @@
     <span class="label">Dates</span>
     <div class="dates-container">
       <button
+        data-id="checkInBtn"
         class="dates-button"
-        @click="changeEditMode('checkIn')"
+        @click="changeEditMode(CHECK_IN)"
         :class="{
-          active: editMode && editMode === 'checkIn',
+          active: editMode && editMode === CHECK_IN,
         }"
       >
         {{ startDateLabel }}
       </button>
       <ArrowIcon class="arrowIcon" />
       <button
+        data-id="checkOutBtn"
         class="dates-button"
-        @click="changeEditMode('checkOut')"
+        @click="changeEditMode(CHECK_OUT)"
         :class="{
-          active: editMode && editMode === 'checkOut',
+          active: editMode && editMode === CHECK_OUT,
         }"
       >
         {{ endDateLabel }}
@@ -26,19 +28,26 @@
 </template>
 
 <script>
-import ArrowIcon from "./../icons/ArrowIcon.vue";
+import ArrowIcon from "@/components/icons/ArrowIcon.vue";
+import { EDIT_MODES, editModeValidator } from './CalendarUtils.js';
+
+const { CHECK_IN, CHECK_OUT } = EDIT_MODES;
 
 export default {
   name: "CalendarDates",
   components: {
     ArrowIcon,
   },
+  data() {
+    return { CHECK_IN, CHECK_OUT }
+  },
   props: {
     startDate: Number,
     endDate: Number,
-    validator: (value) => {
-      return ["checkIn", "checkOut"].includes(value);
-    },
+    editMode: {
+      type: String,
+      validator: editModeValidator,
+    }
   },
   computed: {
     startDateLabel: function () {
@@ -54,7 +63,7 @@ export default {
   },
   methods: {
     changeEditMode(mode) {
-      this.$emit("on-edit-mode-change", mode);
+      this.$emit("onEditModeChange", mode);
     },
   },
 };

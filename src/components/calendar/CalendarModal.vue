@@ -3,9 +3,9 @@
     <div class="modaArrow" :style="arrowPosition"></div>
     <div class="modal">
       <div class="header">
-        <button class="navButton" @click="prevMonth">&lt;</button>
+        <button data-id="prevMonthBtn" class="navButton" @click="prevMonth">&lt;</button>
         <span class="monthLabel">{{ monthName }}</span>
-        <button class="navButton" @click="nextMonth">&gt;</button>
+        <button data-id="nextMonthBtn" class="navButton" @click="nextMonth">&gt;</button>
       </div>
       <div class="monthGrid">
         <div v-for="dayName in dayNames" :key="dayName" class="dayName">
@@ -33,8 +33,12 @@ import {
   getPreviousMonthDate,
   getNextMonthDate,
   getTodayDate,
+  EDIT_MODES,
+  editModeValidator
 } from "./CalendarUtils";
 import CalendarDayItem from "./CalendarDayItem.vue";
+
+const { CHECK_IN, CHECK_OUT } = EDIT_MODES;
 
 export default {
   name: "CalendarGrid",
@@ -44,9 +48,7 @@ export default {
     endDate: Number,
     editMode: {
       type: String,
-      validator: (value) => {
-        return ["checkIn", "checkOut"].includes(value);
-      },
+      validator: editModeValidator,
     },
     availableDates: Array,
   },
@@ -84,7 +86,7 @@ export default {
     },
 
     arrowPosition() {
-      const arrowSide = this.editMode === "checkIn" ? "left" : "right";
+      const arrowSide = this.editMode === CHECK_IN ? "left" : "right";
       return { [arrowSide]: "32px" };
     },
   },
@@ -113,10 +115,10 @@ export default {
       let endDate = this.endDate;
       let editMode = this.editMode;
 
-      if (this.editMode === "checkOut") {
+      if (this.editMode === CHECK_OUT) {
         endDate = selectedDay.miliseconds;
         editMode = null;
-      } else if (this.editMode === "checkIn") {
+      } else if (this.editMode === CHECK_IN) {
         startDate = selectedDay.miliseconds;
         if (endDate && selectedDay.miliseconds > endDate) {
           endDate = null;
@@ -124,7 +126,7 @@ export default {
         if (endDate > this.lastAvailableDate) {
           endDate = null;
         }
-        editMode = "checkOut";
+        editMode = CHECK_OUT;
       }
 
       this.$emit("on-reservation-change", { startDate, endDate, editMode });

@@ -6,9 +6,6 @@
     :availableDates="availableDates"
     @onReservationChange="onReservationChange"
   />
-  <span>{{ checkIn }}</span>
-  -
-  <span>{{ checkOut }}</span>
 </template>
 
 <script>
@@ -27,6 +24,7 @@ export default {
       checkIn: "",
       checkOut: "",
       availableDates: [
+        { from: 1608336000000, to: 1609286400000 },
         { from: 1604185200000, to: 1605654000000 },
         { from: 1609542000000, to: 1609542000000 },
         { from: 1611442800000, to: 1611788400000 },
@@ -43,6 +41,11 @@ export default {
 </script>
 
 <style>
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

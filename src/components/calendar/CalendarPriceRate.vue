@@ -1,5 +1,5 @@
 <template>
-  <div class="price-rate-wrapper">
+  <div class="priceRateWrapper">
     <span class="price">{{ price }}</span>
     <div class="reviews">
       <CalendarStars :rate="rate" />
@@ -31,7 +31,7 @@ export default {
 $star-size: 12px;
 @import "./styles.scss";
 
-.price-rate-wrapper {
+.priceRateWrapper {
   box-sizing: border-box;
   display: block;
   padding-bottom: $padding;

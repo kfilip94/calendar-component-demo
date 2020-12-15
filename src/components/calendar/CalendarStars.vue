@@ -1,11 +1,11 @@
 <template>
-  <div class="stars-container">
+  <div class="starsContainer">
     <div
       v-for="star in stars"
       :key="star"
       :class="{
-        checked: star <= selection.checkedStars,
-        halfChecked: star === selection.halfChecked,
+        checked: star <= checkedStars.count,
+        halfChecked: star === checkedStars.halfCheckedStar,
       }"
       class="star"
     ></div>
@@ -29,20 +29,21 @@ export default {
   },
 
   computed: {
-    selection: function ({ rate }) {
-      if (rate >= 0 && rate <= 5) {
-        let checkedStars = Math.floor(rate);
-        const halfCheckedStar = Math.round((rate - checkedStars) * 2) / 2;
+    checkedStars() {
+      const { rate } = this;
+      if (rate && rate >= 0 && rate <= 5) {
+        let count = Math.floor(rate);
+        const halfCheckedStar = Math.round((rate - count) * 2) / 2;
 
         if (halfCheckedStar === 1) {
-          checkedStars++;
+          count++;
         }
         return {
-          checkedStars,
-          halfChecked: halfCheckedStar === 0.5 ? checkedStars + 1 : null,
+          count,
+          halfCheckedStar: halfCheckedStar === 0.5 ? count + 1 : null,
         };
       } else {
-        return { checkedStars: 0, halfChecked: null };
+        return { count: 0, halfCheckedStar: null };
       }
     },
   },
@@ -55,7 +56,7 @@ export default {
 $star-size: 12px;
 $star-checked-color: #369482;
 
-.stars-container {
+.starsContainer {
   display: flex;
   margin-right: $padding;
 
