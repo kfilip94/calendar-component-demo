@@ -133,7 +133,7 @@ export default {
 
 .reservedDay {
   background-color: #c3fef8;
-  color: #00dbb1;
+  color: $theme-color;
 }
 
 .unavailableDay {
