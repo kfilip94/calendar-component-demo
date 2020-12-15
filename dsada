@@ -1,0 +1,34 @@
+// const DEFAULT_STARS = [new Array(5).map((item, i) => ({
+//   key: `star-${i}`,
+//   isChecked: false,
+//   isHalfChecked: false,
+// }));]
+
+// export default {
+//   name: "CalendarStars",
+//   props: {
+//     avgRate: Number,
+//   },
+//   computed: {
+//     stars: function ({ avgRate }) {
+//       if (avgRate >= 0 && avgRate <= 5) {
+//         let checkedStars = Math.floor(avgRate);
+//         const halfCheckedStar = Math.round((avgRate - checkedStars) * 2) / 2;
+
+//         if (halfCheckedStar === 1) {
+//           checkedStars++;
+//         }
+
+//         const _stars = DEFAULT_STARS.map((isChecked, i) => ({
+//           isChecked: checkedStars > i,
+//           isHalfChecked: halfCheckedStar === 0.5 && i === checkedStars,
+//         }));
+
+//         return _stars;
+//       } else {
+//         return DEFAULT_STARS;
+//       }
+//     },
+//   },
+// };
+//
