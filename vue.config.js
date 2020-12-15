@@ -8,6 +8,7 @@ module.exports = {
       }
     },
   },
+  publicPath: '/project name/',
   css: { requireModuleExtension: true }
 }
 
