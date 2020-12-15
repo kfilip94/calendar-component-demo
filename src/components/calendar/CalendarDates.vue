@@ -29,7 +29,7 @@
 
 <script>
 import ArrowIcon from "@/components/icons/ArrowIcon.vue";
-import { EDIT_MODES, editModeValidator } from './CalendarUtils.js';
+import { EDIT_MODES, editModeValidator } from "./CalendarUtils.js";
 
 const { CHECK_IN, CHECK_OUT } = EDIT_MODES;
 
@@ -39,7 +39,7 @@ export default {
     ArrowIcon,
   },
   data() {
-    return { CHECK_IN, CHECK_OUT }
+    return { CHECK_IN, CHECK_OUT };
   },
   props: {
     startDate: Number,
@@ -47,23 +47,34 @@ export default {
     editMode: {
       type: String,
       validator: editModeValidator,
-    }
+    },
   },
   computed: {
     startDateLabel: function () {
       return this.startDate
-        ? new Date(this.startDate).toLocaleDateString()
+        ? this.formatDate(new Date(this.startDate))
         : "Check In";
     },
     endDateLabel: function () {
       return this.endDate
-        ? new Date(this.endDate).toLocaleDateString()
+        ? this.formatDate(new Date(this.endDate))
         : "Check Out";
     },
   },
   methods: {
     changeEditMode(mode) {
       this.$emit("onEditModeChange", mode);
+    },
+
+    formatDate(dateObj) {
+      const year = dateObj.getFullYear();
+      const month = new Intl.DateTimeFormat("en", { month: "2-digit" }).format(
+        dateObj
+      );
+      const day = new Intl.DateTimeFormat("en", { day: "2-digit" }).format(
+        dateObj
+      );
+      return `${day}.${month}.${year}`;
     },
   },
 };

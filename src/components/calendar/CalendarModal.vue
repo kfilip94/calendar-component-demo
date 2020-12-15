@@ -79,7 +79,7 @@ export default {
     },
 
     monthName() {
-      const month = this.selectedDate.toLocaleString("default", {
+      const month = this.selectedDate.toLocaleString("en-US", {
         month: "long",
       });
       const year = this.selectedDate.getFullYear();
@@ -126,19 +126,20 @@ export default {
 
       if (this.editMode === CHECK_IN) {
         startDate = selectedDay.miliseconds;
-        if (endDate && selectedDay.miliseconds > endDate) {
-          endDate = null;
-        }
+        editMode = CHECK_OUT;
 
         const lastAvailableEndDate = this.getLastAvailableEndDate(
           startDate,
           this.availableDates
         );
 
-        if (endDate > lastAvailableEndDate) {
+        //reset endDate if needed
+        if (
+          endDate &&
+          (startDate > endDate || endDate > lastAvailableEndDate)
+        ) {
           endDate = null;
         }
-        editMode = CHECK_OUT;
       } else if (this.editMode === CHECK_OUT) {
         endDate = selectedDay.miliseconds;
         editMode = null;
