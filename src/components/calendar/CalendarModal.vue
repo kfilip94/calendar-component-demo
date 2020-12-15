@@ -3,9 +3,13 @@
     <div class="modaArrow" :style="arrowPosition"></div>
     <div class="modal">
       <div class="header">
-        <button data-id="prevMonthBtn" class="navButton" @click="prevMonth">&lt;</button>
+        <button data-id="prevMonthBtn" class="navButton" @click="prevMonth">
+          &lt;
+        </button>
         <span class="monthLabel">{{ monthName }}</span>
-        <button data-id="nextMonthBtn" class="navButton" @click="nextMonth">&gt;</button>
+        <button data-id="nextMonthBtn" class="navButton" @click="nextMonth">
+          &gt;
+        </button>
       </div>
       <div class="monthGrid">
         <div v-for="dayName in dayNames" :key="dayName" class="dayName">
@@ -17,7 +21,7 @@
           :day="day"
           :startDate="startDate"
           :endDate="endDate"
-          :lastAvailableDate="lastAvailableDate"
+          :lastAvailableEndDate="lastAvailableEndDate"
           :todayDate="todayDate"
           :editMode="editMode"
           @onDayClick="editReservationDays"
@@ -34,7 +38,7 @@ import {
   getNextMonthDate,
   getTodayDate,
   EDIT_MODES,
-  editModeValidator
+  editModeValidator,
 } from "./CalendarUtils";
 import CalendarDayItem from "./CalendarDayItem.vue";
 
@@ -67,14 +71,11 @@ export default {
   },
 
   computed: {
-    lastAvailableDate() {
-      if (this.startDate) {
-        const availableDates = this.availableDates.find(
-          ({ from, to }) => from <= this.startDate && this.startDate <= to
-        );
-        return availableDates ? availableDates.to : null;
-      }
-      return null;
+    lastAvailableEndDate() {
+      const { startDate, availableDates, getLastAvailableEndDate } = this;
+      return startDate
+        ? getLastAvailableEndDate(startDate, availableDates)
+        : null;
     },
 
     monthName() {
@@ -95,6 +96,7 @@ export default {
     selectedDate() {
       this.updateCalendarDays();
     },
+    startDate() {},
   },
 
   methods: {
@@ -110,23 +112,36 @@ export default {
       this.selectedDate = getNextMonthDate(this.selectedDate);
     },
 
+    getLastAvailableEndDate(startDate, availableDates) {
+      const availableEndDates = this.availableDates.find(
+        ({ from, to }) => from <= startDate && startDate <= to
+      );
+      return availableEndDates ? availableEndDates.to : null;
+    },
+
     editReservationDays(selectedDay) {
       let startDate = this.startDate;
       let endDate = this.endDate;
       let editMode = this.editMode;
 
-      if (this.editMode === CHECK_OUT) {
-        endDate = selectedDay.miliseconds;
-        editMode = null;
-      } else if (this.editMode === CHECK_IN) {
+      if (this.editMode === CHECK_IN) {
         startDate = selectedDay.miliseconds;
         if (endDate && selectedDay.miliseconds > endDate) {
           endDate = null;
         }
-        if (endDate > this.lastAvailableDate) {
+
+        const lastAvailableEndDate = this.getLastAvailableEndDate(
+          startDate,
+          this.availableDates
+        );
+
+        if (endDate > lastAvailableEndDate) {
           endDate = null;
         }
         editMode = CHECK_OUT;
+      } else if (this.editMode === CHECK_OUT) {
+        endDate = selectedDay.miliseconds;
+        editMode = null;
       }
 
       this.$emit("on-reservation-change", { startDate, endDate, editMode });

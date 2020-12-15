@@ -4,9 +4,9 @@
     :class="{
       startDay: isStartDay,
       endDay: isEndDay,
-      reservedDay: isReservedDay,
+      reserved: isReserved,
       today: isToday,
-      unavailableDay: isUnavailableDay,
+      unavailable: isUnavailable,
     }"
     @click="selectDay"
     class="day"
@@ -16,10 +16,7 @@
 </template>
 
 <script>
-import {
-  EDIT_MODES,
-  editModeValidator
-} from "./CalendarUtils";
+import { EDIT_MODES, editModeValidator } from "./CalendarUtils";
 const { CHECK_OUT } = EDIT_MODES;
 
 export default {
@@ -32,7 +29,7 @@ export default {
       type: String,
       validator: editModeValidator,
     },
-    lastAvailableDate: Number,
+    lastAvailableEndDate: Number,
     todayDate: Number,
   },
   computed: {
@@ -48,7 +45,7 @@ export default {
       );
     },
 
-    isReservedDay() {
+    isReserved() {
       const { day, startDate, endDate } = this;
       return day.miliseconds > startDate && day.miliseconds < endDate;
     },
@@ -57,24 +54,24 @@ export default {
       return this.day.miliseconds === this.todayDate;
     },
 
-    isUnavailableDay() {
-      const { day, startDate, lastAvailableDate, editMode } = this;
+    isUnavailable() {
+      const { day, startDate, lastAvailableEndDate, editMode } = this;
       return (
         !day.available ||
         (startDate && editMode === CHECK_OUT && day.miliseconds < startDate) ||
-        (lastAvailableDate &&
+        (lastAvailableEndDate &&
           editMode === CHECK_OUT &&
-          lastAvailableDate < day.miliseconds)
+          lastAvailableEndDate < day.miliseconds)
       );
     },
   },
   methods: {
     selectDay() {
-      if(!this.isUnavailableDay) {
-        this.$emit('onDayClick', this.day)
+      if (!this.isUnavailableDay) {
+        this.$emit("onDayClick", this.day);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -97,7 +94,7 @@ export default {
   }
 }
 
-%reservedDay {
+%reserved {
   background-color: $background-color;
   .dayNumber {
     background-color: $theme-color;
@@ -108,12 +105,12 @@ export default {
 }
 
 .startDay {
-  @extend %reservedDay;
+  @extend %reserved;
   background: linear-gradient(90deg, transparent 50%, #c3fef8 50%);
 }
 
 .endDay {
-  @extend %reservedDay;
+  @extend %reserved;
   background: linear-gradient(90deg, #c3fef8 50%, transparent 50%);
 }
 
@@ -127,16 +124,16 @@ export default {
   box-sizing: border-box;
 }
 
-.reservedDay.today {
+.reserved.today {
   background-color: #c3fef8;
 }
 
-.reservedDay {
+.reserved {
   background-color: #c3fef8;
   color: $theme-color;
 }
 
-.unavailableDay {
+.unavailable {
   color: lightgrey;
   cursor: auto;
   pointer-events: none;
