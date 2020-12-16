@@ -6,7 +6,7 @@ exports[`CalendarModal.vue select next month 1`] = `
   selecteddate="Tue Dec 01 2020 00:00:00 GMT+0100 (Central European Standard Time)"
 >
   <div
-    class="modaArrow"
+    class="modalArrow"
     style="right: 32px;"
   />
   <div
@@ -464,7 +464,7 @@ exports[`CalendarModal.vue select previous month 1`] = `
   selecteddate="Mon Feb 01 2021 00:00:00 GMT+0100 (Central European Standard Time)"
 >
   <div
-    class="modaArrow"
+    class="modalArrow"
     style="right: 32px;"
   />
   <div
