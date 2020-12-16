@@ -26,7 +26,7 @@ prop name | type | description
 price | String | the price that will be displayed 
 rate | Number | represents review stars, has to be between 0 and 5
 reviewsCount | String | represents reviews number
-availableDates | Array | array of objects with available dates, e.g. `[{ from: dateA, to: dateB }, ...]`
+availableDates | Array | array of objects with available dates, is required, e.g. `[{ from: dateA, to: dateB }, ...]`
 checkInDate | Date | initial check-in date, is optional
 checkInOut | Date | initial check-out date, is optional
 onReservationChange | Function | runs each time when check-in or check-out date changes, e.g:  `({ checkInDate, checkOutDate }) => { ...your code here }`
