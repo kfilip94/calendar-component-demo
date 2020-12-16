@@ -1,6 +1,6 @@
 <template>
   <div class="modalContainer">
-    <div class="modaArrow" :style="arrowPosition"></div>
+    <div class="modalArrow" :style="arrowPosition"></div>
     <div class="modal">
       <div class="header">
         <button data-id="prevMonthBtn" class="navButton" @click="prevMonth">
@@ -60,7 +60,7 @@ export default {
   data() {
     return {
       todayDate: getTodayDate(),
-      selectedDate: new Date(),
+      selectedMonthDate: this.resetSelectedMonthDate(this.startDate),
       dayNames: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
       days: [],
     };
@@ -79,10 +79,10 @@ export default {
     },
 
     monthName() {
-      const month = this.selectedDate.toLocaleString("en-US", {
+      const month = this.selectedMonthDate.toLocaleString("en-US", {
         month: "long",
       });
-      const year = this.selectedDate.getFullYear();
+      const year = this.selectedMonthDate.getFullYear();
       return `${month} ${year}`;
     },
 
@@ -93,23 +93,30 @@ export default {
   },
 
   watch: {
-    selectedDate() {
+    selectedMonthDate() {
       this.updateCalendarDays();
     },
-    startDate() {},
+    editMode() {
+      if (this.editMode) {
+        this.resetSelectedMonthDate(this.startDate);
+      }
+    },
+    startDate(s) {
+      console.log({ s });
+    },
   },
 
   methods: {
     updateCalendarDays() {
-      this.days = getCalendarDays(this.selectedDate, this.availableDates);
+      this.days = getCalendarDays(this.selectedMonthDate, this.availableDates);
     },
 
     prevMonth() {
-      this.selectedDate = getPreviousMonthDate(this.selectedDate);
+      this.selectedMonthDate = getPreviousMonthDate(this.selectedMonthDate);
     },
 
     nextMonth() {
-      this.selectedDate = getNextMonthDate(this.selectedDate);
+      this.selectedMonthDate = getNextMonthDate(this.selectedMonthDate);
     },
 
     getLastAvailableEndDate(startDate, availableDates) {
@@ -147,6 +154,11 @@ export default {
 
       this.$emit("on-reservation-change", { startDate, endDate, editMode });
     },
+
+    resetSelectedMonthDate(startDate) {
+      console.log("RESET: ", { startDate });
+      return startDate ? new Date(startDate) : new Date();
+    },
   },
 };
 </script>
@@ -158,7 +170,7 @@ export default {
   position: relative;
   width: 100%;
 
-  .modaArrow {
+  .modalArrow {
     box-shadow: 0px 0px 4px 0px rgba(122, 122, 122, 0.5);
     display: block;
     width: 12px;
@@ -178,6 +190,7 @@ export default {
     width: 100%;
     overflow: hidden;
     box-shadow: 0px 0px 4px 0px rgba(122, 122, 122, 0.5);
+    width: 100%;
   }
 
   .monthGrid {

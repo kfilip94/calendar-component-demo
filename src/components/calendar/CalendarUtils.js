@@ -12,7 +12,7 @@ const getDays = (startDate, endDate, availableDates) => {
 
   const daysArray = [];
   let currentDate = startDate;
- 
+
   while (Date.parse(currentDate) <= endDateMs) {
     const currentDay = currentDate.getDate();
     const currentMonth = currentDate.getMonth();
@@ -74,10 +74,17 @@ export const getTodayDate = () => {
 
 export const EDIT_MODES = {
   CHECK_IN: "checkIn",
-  CHECK_OUT: "checkOut",
-}
+  CHECK_OUT: "checkOut"
+};
 
 export const editModeValidator = (value) => {
   const { CHECK_IN, CHECK_OUT } = EDIT_MODES;
   return [CHECK_IN, CHECK_OUT].includes(value);
-}
+};
+
+export const convertDatesToMs = (dates) => {
+  return dates.map(({ from, to }) => ({
+    from: Date.parse(from),
+    to: Date.parse(to)
+  }));
+};

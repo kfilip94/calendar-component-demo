@@ -4,6 +4,8 @@
     :rate="rate"
     :reviewsCount="reviewsCount"
     :availableDates="availableDates"
+    :checkInDate="new Date('2020-12-24')"
+    :checkOutDate="new Date('2020-12-26')"
     @onReservationChange="onReservationChange"
   />
 </template>
@@ -21,20 +23,20 @@ export default {
       price: "329 zł",
       rate: 3.27,
       reviewsCount: "47",
-      checkIn: "",
-      checkOut: "",
+      checkInDate: null,
+      checkOutDate: null,
       availableDates: [
-        { from: 1608336000000, to: 1609286400000 },
-        { from: 1604185200000, to: 1605654000000 },
-        { from: 1609542000000, to: 1609542000000 },
-        { from: 1611442800000, to: 1611788400000 },
+        { from: new Date("2020-12-20"), to: new Date("2020-12-28") },
+        { from: new Date("2020-12-30"), to: new Date("2021-1-4") },
+        { from: new Date("2021-1-8"), to: new Date("2021-1-8") },
+        { from: new Date("2021-1-10"), to: new Date("2021-1-23") },
       ],
     };
   },
   methods: {
-    onReservationChange({ startDate, endDate }) {
-      this.checkIn = startDate;
-      this.checkOut = endDate;
+    onReservationChange({ checkInDate, checkOutDate }) {
+      this.checkInDate = checkInDate;
+      this.checkOutDate = checkOutDate;
     },
   },
 };

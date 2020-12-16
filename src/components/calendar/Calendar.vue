@@ -17,7 +17,7 @@
         :startDate="startDate"
         :endDate="endDate"
         :editMode="editMode"
-        :availableDates="availableDates"
+        :availableDates="availableDatesInMs"
         @onReservationChange="updateReservationDates"
       />
     </div>
@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import { convertDatesToMs } from "./CalendarUtils.js";
 import CalendarModal from "./CalendarModal.vue";
 import CalendarDates from "./CalendarDates.vue";
 import CalendarPriceRate from "./CalendarPriceRate.vue";
@@ -41,13 +42,20 @@ export default {
     rate: Number,
     reviewsCount: String,
     availableDates: Array,
+    checkInDate: Date,
+    checkOutDate: Date,
   },
   data() {
     return {
-      startDate: null,
-      endDate: null,
+      startDate: this.checkInDate && Date.parse(this.checkInDate),
+      endDate: this.checkOutDate && Date.parse(this.checkOutDate),
       editMode: null,
     };
+  },
+  computed: {
+    availableDatesInMs() {
+      return convertDatesToMs(this.availableDates);
+    },
   },
   methods: {
     resetEditMode() {
@@ -63,7 +71,10 @@ export default {
       this.endDate = endDate;
       this.editMode = editMode;
 
-      this.$emit("on-reservation-change", { startDate, endDate });
+      const checkInDate = new Date(startDate);
+      const checkOutDate = new Date(endDate);
+
+      this.$emit("on-reservation-change", { checkInDate, checkOutDate });
     },
   },
   directives: {

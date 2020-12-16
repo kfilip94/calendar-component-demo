@@ -94,7 +94,7 @@ export default {
   }
 }
 
-%reserved {
+%checkInOutDay {
   background-color: $background-color;
   .dayNumber {
     background-color: $theme-color;
@@ -105,12 +105,12 @@ export default {
 }
 
 .startDay {
-  @extend %reserved;
+  @extend %checkInOutDay;
   background: linear-gradient(90deg, transparent 50%, #c3fef8 50%);
 }
 
 .endDay {
-  @extend %reserved;
+  @extend %checkInOutDay;
   background: linear-gradient(90deg, #c3fef8 50%, transparent 50%);
 }
 
