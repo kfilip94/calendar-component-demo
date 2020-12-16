@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { convertDatesToMs } from "./CalendarUtils.js";
+import { convertDatesToMs, convertDateToMs } from "./CalendarUtils.js";
 import CalendarModal from "./CalendarModal.vue";
 import CalendarDates from "./CalendarDates.vue";
 import CalendarPriceRate from "./CalendarPriceRate.vue";
@@ -47,8 +47,8 @@ export default {
   },
   data() {
     return {
-      startDate: this.checkInDate && Date.parse(this.checkInDate),
-      endDate: this.checkOutDate && Date.parse(this.checkOutDate),
+      startDate: convertDateToMs(this.checkInDate),
+      endDate: convertDateToMs(this.checkOutDate),
       editMode: null,
     };
   },

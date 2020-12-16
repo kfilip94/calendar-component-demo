@@ -101,9 +101,6 @@ export default {
         this.resetSelectedMonthDate(this.startDate);
       }
     },
-    startDate(s) {
-      console.log({ s });
-    },
   },
 
   methods: {
@@ -156,7 +153,6 @@ export default {
     },
 
     resetSelectedMonthDate(startDate) {
-      console.log("RESET: ", { startDate });
       return startDate ? new Date(startDate) : new Date();
     },
   },

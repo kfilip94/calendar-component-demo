@@ -5,7 +5,7 @@
     :reviewsCount="reviewsCount"
     :availableDates="availableDates"
     :checkInDate="new Date('2020-12-24')"
-    :checkOutDate="new Date('2020-12-26')"
+    :checkOutDate="new Date('2020.12.28')"
     @onReservationChange="onReservationChange"
   />
 </template>
@@ -26,10 +26,10 @@ export default {
       checkInDate: null,
       checkOutDate: null,
       availableDates: [
-        { from: new Date("2020-12-20"), to: new Date("2020-12-28") },
-        { from: new Date("2020-12-30"), to: new Date("2021-1-4") },
-        { from: new Date("2021-1-8"), to: new Date("2021-1-8") },
-        { from: new Date("2021-1-10"), to: new Date("2021-1-23") },
+        { from: new Date(2020, 11, 20), to: new Date(2020, 11, 28) },
+        { from: new Date(2020, 11, 30), to: new Date(2021, 0, 4) },
+        { from: new Date(2021, 0, 8), to: new Date(2021, 0, 8) },
+        { from: new Date(2021, 0, 10), to: new Date(2021, 0, 23) },
       ],
     };
   },

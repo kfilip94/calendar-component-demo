@@ -1,9 +1,20 @@
-const isDateAvailable = (miliseconds, availableDates) => {
-  return (
-    !!availableDates.some(
-      ({ from, to }) => miliseconds >= from && miliseconds <= to
-    ) && miliseconds >= getTodayDate()
-  );
+// calendar modal utils
+export const getCalendarDays = (dateObj = new Date(), availableDates = []) => {
+  const month = dateObj.getMonth();
+  const year = dateObj.getFullYear();
+
+  const lastDayInPrevMonth = new Date(year, month, 0);
+  const numberInMonth = lastDayInPrevMonth.getDate();
+  const numberInWeek = lastDayInPrevMonth.getDay();
+  const startDay = numberInMonth - numberInWeek;
+  const startDate = new Date(year, month - 1, startDay);
+
+  const lastDayInCurrentMonth = new Date(year, month + 1, 0);
+  const endDay = 6 - lastDayInCurrentMonth.getDay();
+  const endDate = new Date(year, month + 1, endDay);
+
+  const days = getDays(startDate, endDate, availableDates);
+  return days;
 };
 
 const getDays = (startDate, endDate, availableDates) => {
@@ -34,22 +45,12 @@ const getDays = (startDate, endDate, availableDates) => {
   return daysArray;
 };
 
-export const getCalendarDays = (dateObj = new Date(), availableDates = []) => {
-  const month = dateObj.getMonth();
-  const year = dateObj.getFullYear();
-
-  const lastDayInPrevMonth = new Date(year, month, 0);
-  const numberInMonth = lastDayInPrevMonth.getDate();
-  const numberInWeek = lastDayInPrevMonth.getDay();
-  const startDay = numberInMonth - numberInWeek;
-  const startDate = new Date(year, month - 1, startDay);
-
-  const lastDayInCurrentMonth = new Date(year, month + 1, 0);
-  const endDay = 6 - lastDayInCurrentMonth.getDay();
-  const endDate = new Date(year, month + 1, endDay);
-
-  const days = getDays(startDate, endDate, availableDates);
-  return days;
+const isDateAvailable = (miliseconds, availableDates) => {
+  return (
+    !!availableDates.some(
+      ({ from, to }) => miliseconds >= from && miliseconds <= to
+    ) && miliseconds >= getTodayDate()
+  );
 };
 
 export const getPreviousMonthDate = (dateObj) => {
@@ -72,6 +73,27 @@ export const getTodayDate = () => {
   return Date.parse(new Date(year, month, day));
 };
 
+// date convertion
+export const convertDatesToMs = (dates) => {
+  return dates.map(({ from, to }) => {
+    return {
+      from: convertDateToMs(from),
+      to: convertDateToMs(to)
+    };
+  });
+};
+
+export const convertDateToMs = (dateObj) => {
+  if (dateObj) {
+    const year = dateObj.getFullYear();
+    const month = dateObj.getMonth();
+    const day = dateObj.getDate();
+    return Date.parse(new Date(year, month, day));
+  }
+  return null;
+};
+
+// calendar edit modes
 export const EDIT_MODES = {
   CHECK_IN: "checkIn",
   CHECK_OUT: "checkOut"
@@ -80,11 +102,4 @@ export const EDIT_MODES = {
 export const editModeValidator = (value) => {
   const { CHECK_IN, CHECK_OUT } = EDIT_MODES;
   return [CHECK_IN, CHECK_OUT].includes(value);
-};
-
-export const convertDatesToMs = (dates) => {
-  return dates.map(({ from, to }) => ({
-    from: Date.parse(from),
-    to: Date.parse(to)
-  }));
 };
